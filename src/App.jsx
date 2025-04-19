@@ -1,8 +1,16 @@
 import "./App.css";
-import 
+import { Provider } from "react-redux";
+import store from "./components/redux/store";
+import PizzaBox from "./components/PizzaBox";
 
 function App() {
-  return <>hello world</>;
+  return (
+    <>
+      <Provider store={store}>
+        <PizzaBox />
+      </Provider>
+    </>
+  );
 }
 
 export default App;
